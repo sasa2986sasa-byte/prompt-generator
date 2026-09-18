@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Prompt Generator</h1>
+    <p>AI向けプロンプトを簡単に作成できるWebツール</p>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- 左ペイン -->
+      <section id="input-pane">
+
+        <h2>プリセット選択</h2>
+        <select id="preset-select"></select>
+
+        <h3>役割（Roles）</h3>
+        <div id="roles-checkbox"></div>
+        <textarea id="roles-custom" placeholder="役割を追加"></textarea>
+
+        <h3>目的（Goals）</h3>
+        <div id="goals-checkbox"></div>
+        <textarea id="goals-custom" placeholder="目的を追加"></textarea>
+
+        <h3>タスク（Tasks）</h3>
+        <div id="tasks-checkbox"></div>
+        <textarea id="tasks-custom" placeholder="タスクを追加"></textarea>
+
+        <h3>出力形式（Output Format）</h3>
+        <div id="output-checkbox"></div>
+        <textarea id="output-custom" placeholder="出力形式を追加"></textarea>
+
+        <h3>スタイル（Style）</h3>
+        <div id="style-checkbox"></div>
+        <textarea id="style-custom" placeholder="スタイルを追加"></textarea>
+
+        <h3>制約（Constraints）</h3>
+        <div id="constraints-checkbox"></div>
+        <textarea id="constraints-custom" placeholder="制約を追加"></textarea>
+
+        <button id="generate-btn">生成</button>
+        <button id="clear-btn">クリア</button>
+        <button id="save-btn">保存</button>
+
+      </section>
+
+      <!-- 右ペイン -->
+      <section id="output-pane">
+        <h2>生成されたプロンプト</h2>
+        <textarea id="output-text"></textarea>
+
+        <button id="copy-btn">コピー</button>
+        <button id="share-btn">URL共有リンク生成</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="presets.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
